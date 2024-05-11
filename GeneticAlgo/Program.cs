@@ -36,7 +36,7 @@ namespace GeneticAlgorithm
         }
 
         // Мутация особи
-        void Mutate(List<int> individual, double mutationRate)
+        static void Mutate(List<int> individual, double mutationRate)
         {
             for (int i = 0; i < individual.Count; i++)
             {
@@ -45,9 +45,9 @@ namespace GeneticAlgorithm
             }
         }
 
-        static void Muin(string[] args)
+        static void Main(string[] args)
         {
-            double populationSize = 100;
+            int populationSize = 100;
             int individualLength = 10;
             double mutationRate = 0.01;
             int generations = 100;
@@ -92,7 +92,7 @@ namespace GeneticAlgorithm
                     return i;
             }
 
-            //return fitnessScores.Count - 1;
+            return fitnessScores.Count - 1;
         }
 
     }
